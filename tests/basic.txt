@@ -1,0 +1,36 @@
+
+# arguments: num
+factorial:
+    # num
+    peek
+    # num num
+    "0"
+    # num num 0
+    equals
+    # num (num==0)
+    "factorial-is-0" gotoIf
+    "factorial-is-not-0" goto
+
+    # the flow of control should never reach here.
+
+    factorial-is-not-0:
+        # num
+        peek
+        # num num
+        "1"
+        # num num 1
+        sub
+        # num (num-1)
+        "factorial" call
+        # num !(num-1)
+        mult
+        # num*!(num-1)
+        return
+
+    factorial-is-0:
+        # num
+        pop
+        #
+        "1"
+        # 1
+        return
