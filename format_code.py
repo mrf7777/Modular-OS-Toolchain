@@ -45,7 +45,7 @@ def get_tokens_from_line(line):
     # regex reference: "\".*?\"|[\w:]+"gm
     #   identifies individual literals or commands, does not support escape chars
 
-    token_pattern = re.compile(r"/\".*?\"|[\w:]+/gm")
+    token_pattern = re.compile(r"\".*?\"|[\w:\-]+")
     tokens = re.findall(token_pattern, fixed_line)
     return tokens
 
