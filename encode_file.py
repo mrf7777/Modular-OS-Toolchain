@@ -4,7 +4,7 @@ import sys
 def encode_string(string):
     encoded_string = string.replace("\"", "\\q")    # replace quotes with backslash q
     encoded_string = encoded_string.replace("\\", "\\\\")   # replace backslash with double backslash
-    encoded_string = encoded_string.replace(",", "\c")      # replace comma with backslash comma
+    encoded_string = encoded_string.replace(",", "\\c")      # replace comma with backslash comma
     return encoded_string
 
 
