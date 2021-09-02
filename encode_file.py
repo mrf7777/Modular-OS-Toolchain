@@ -13,6 +13,17 @@ This encoding ensures that text files can be uploaded to a Scratch 3.0 list.
 Commas and quote characters provide unexpected behavior upon importing.
 """
 
+def print_usage_message():
+    print("")
+    print("Usage:")
+    print("    python.exe encode_file.py <source file> <destination file>")
+    print("Description:")
+    print("    If \"source file\" exists, it is assumed to be a raw text file. Its contents are encoded")
+    print("        into \"Modular OS\" encoding. A file must be in \"Modular OS\" encoding before it can")
+    print("        be uploaded into a Scratch 3.0 list correctly.")
+    print("")
+    print("    The encoded contents are written to \"destination file\". The file is created or cleared first.")
+
 
 def encode_string(string):
     encoded_string = string.replace("\\", "\\\\")  # replace backslash with double backslash
@@ -39,7 +50,9 @@ def decode_file(src_file, targ_file):
 
 
 def main(args):
-    pass
+    if len(args) != 3:
+        print_usage_message()
+        sys.exit(0)
 
 
 if __name__ == "__main__":

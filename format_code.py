@@ -6,13 +6,13 @@ import re
 def print_usage_message():
     print("")
     print("Usage:")
-    print("python.exe format_code.py <source code file> <destination file>")
+    print("    python.exe format_code.py <source code file> <destination file>")
+    print("Description:")
+    print("    This formats the contents of \"source code file\", written to \"destination file\",")
+    print("        and fixes it to work with Modular OS.")
     print("")
-    print("This formats the contents of \"source code file\", written to \"destination file\",")
-    print("    and fixes it to work with Modular OS.")
-    print("")
-    print("If the destination file exists, it is cleared and overwritten.")
-    print("If the destination file does not exists, the file is created and written.")
+    print("    If the destination file exists, it is cleared and overwritten.")
+    print("    If the destination file does not exists, the file is created and written.")
 
 
 """
