@@ -1,0 +1,36 @@
+
+# arguments: num
+factorial:
+    # num
+    peek
+    # num num
+    \q0\q
+    # num num 0
+    equals
+    # num (num==0)
+    \qfactorial-is-0\q gotoIf
+    \qfactorial-is-not-0\q goto
+
+    # the flow of control should never reach here.
+
+    factorial-is-not-0:
+        # num
+        peek
+        # num num
+        \q1\q
+        # num num 1
+        sub
+        # num (num-1)
+        \qfactorial\q call
+        # num !(num-1)
+        mult
+        # num*!(num-1)
+        return
+
+    factorial-is-0:
+        # num
+        pop
+        #
+        \q1\q
+        # 1
+        return

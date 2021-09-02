@@ -72,7 +72,32 @@ def main(args):
         sys.exit(0)
 
     # now it is time to attempt to open files
+    source_file = None
+    try:
+        source_file = open(source_filename, "rt")
+    except OSError:
+        print("File", source_filename, "does not exist or could not be opened.")
+        sys.exit(1)
 
+    destination_file = None
+    try:
+        destination_file = open(destination_filename, "wt")
+    except OSError:
+        print("File", destination_filename, "could not be cleared, be created, or does not exist.")
+        sys.exit(1)
+
+    # files opened, do the encoding or decoding
+    if encode_or_decode == "e":
+        encode_file(source_file, destination_file)
+    elif encode_or_decode == "d":
+        decode_file(source_file, destination_file)
+    else:
+        print("Fatal error. Encode or decode option not correct.")
+        sys.exit(1)
+
+    # close files
+    source_file.close()
+    destination_file.close()
 
 
 if __name__ == "__main__":
