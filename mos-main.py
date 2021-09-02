@@ -32,7 +32,7 @@ def print_usage_message(command=None):
         print("    The result is written to a file named <target file>. If the file exists, it is")
         print("        first cleared. If not, it is created.")
         print("Options:")
-        print("    -n      The output will not be encoded into Modular OS, contrary to default behavior.")
+        print("    -n      The output will not be encoded into Modular OS encoding, contrary to default behavior.")
     elif command == "encode":
         print("")
         print("Usage:")
@@ -71,12 +71,12 @@ def main(args):
 
     # there are at least 2 arguments / 1 passed argument
 
-    command = args[1]   # capture the first passed argument
+    command = args[1]  # capture the first passed argument
 
     if command == "help":
 
         # if no command or subject. or if too many commands or subjects
-        if len(args) <= 2 or len(args > 3):
+        if len(args) <= 2 or len(args) > 3:
             print_usage_message("help")
             sys.exit(0)
 
@@ -86,20 +86,20 @@ def main(args):
     if command == "compile":
 
         # ensure there are a correct number of arguments
-        if len(args) < 3 or len(args) > 4:
+        if len(args) < 4 or len(args) > 5:
             print_usage_message("compile")
             sys.exit(0)
 
-        # there should now be between 2 to 3 passed arguments
+        # there should now be between 4 to 5 passed arguments
 
         # see if the user wants the compiled code to be encoded into Modular OS encoding
         # by default, yes.
         encode_output = True
-        if len(args) == 4:  # ensure that they actually made an option.
-            if args[3] == "-n":
+        if len(args) == 5:  # ensure that they actually made an option.
+            if args[4] == "-n":
                 encode_output = False
             else:
-                print("Compile option \"" + args[3] + "\" is not valid.")
+                print("Compile option \"" + args[4] + "\" is not valid.")
                 print_usage_message("compile")
                 sys.exit(0)
 
@@ -108,12 +108,12 @@ def main(args):
         # take this route if encoding is to be done after
         if encode_output:
             temp_file, temp_filename = tempfile.mkstemp(text=True)
-            scripts.format_code.main(["dummy", args[1], temp_filename])
-            scripts.encode_file.main(["dummy", temp_filename, args[2]])
+            scripts.format_code.main(["dummy", args[2], temp_filename])
+            scripts.encode_file.main(["dummy", "e", temp_filename, args[3]])
             os.close(temp_file)
         # take this route if no encoding is to be done
         else:
-            scripts.format_code.main(["dummy", args[1], args[2]])
+            scripts.format_code.main(["dummy", args[2], args[3]])
 
     if command == "encode":
 
@@ -141,10 +141,6 @@ def main(args):
         else:
             print("Fatal error. Invalid encoding option.")
             sys.exit(1)
-
-
-
-
 
 
 if __name__ == "__main__":
