@@ -13,6 +13,7 @@ This encoding ensures that text files can be uploaded to a Scratch 3.0 list.
 Commas and quote characters provide unexpected behavior upon importing.
 """
 
+
 def print_usage_message():
     print("")
     print("Usage:")
@@ -53,9 +54,25 @@ def decode_file(src_file, targ_file):
 
 
 def main(args):
+    # guards
+
+    # ensure that there are a correct number of arguments
     if len(args) != 4:
         print_usage_message()
         sys.exit(0)
+
+    # give names to the arguments
+    encode_or_decode = args[1]
+    source_filename = args[2]
+    destination_filename = args[3]
+
+    # ensure that the client has selected to encode or decode
+    if encode_or_decode not in ["e", "d"]:
+        print_usage_message()
+        sys.exit(0)
+
+    # now it is time to attempt to open files
+
 
 
 if __name__ == "__main__":
