@@ -13,11 +13,29 @@ This encoding ensures that text files can be uploaded to a Scratch 3.0 list.
 Commas and quote characters provide unexpected behavior upon importing.
 """
 
+
 def encode_string(string):
     encoded_string = string.replace("\\", "\\\\")  # replace backslash with double backslash
-    encoded_string = encoded_string.replace("\"", "\\q")    # replace quotes with backslash q
-    encoded_string = encoded_string.replace(",", "\\c")      # replace comma with backslash comma
+    encoded_string = encoded_string.replace("\"", "\\q")  # replace quotes with backslash q
+    encoded_string = encoded_string.replace(",", "\\c")  # replace comma with backslash comma
     return encoded_string
+
+
+def decode_string(string):
+    decoded_string = string.replace("\\c", ",")
+    decoded_string = decoded_string.replace("\\q", "\"")
+    decoded_string = decoded_string.replace("\\\\", "\\")
+    return decoded_string
+
+
+def encode_file(src_file, targ_file):
+    for line in src_file:
+        targ_file.write(encode_string(line))
+
+
+def decode_file(src_file, targ_file):
+    for line in src_file:
+        targ_file.write(encode_string(line))
 
 
 def main(args):
