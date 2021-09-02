@@ -1,4 +1,8 @@
 
+# backslash \\ test
+# double backslash \\\\ test
+# quote \q test
+# double quote \q test \q
 # arguments: num
 factorial:
     # num

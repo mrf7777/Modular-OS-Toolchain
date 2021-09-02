@@ -36,12 +36,29 @@ def encode_string(string):
     return encoded_string
 
 
+# decoding can be tricky using replace. Therefore, a custom loop is used.
 def decode_string(string):
-    decoded_string = string.replace("\\c", ",")
-    decoded_string = decoded_string.replace("\\q", "\"")
-    decoded_string = decoded_string.replace("\\\\", "\\")
-    return decoded_string
+    decoded_string = ""
+    previous_char = None
+    for char in string:
+        if previous_char == '\\':
+            if char == '\\':
+                decoded_string += '\\'
+            elif char == 'q':
+                decoded_string += '"'
+            elif char == 'c':
+                decoded_string += ','
+            else:
+                decoded_string += char
+            previous_char = None    # in case the current char is a backslash, this ensures correct decoding of
+            # backslashes
+        elif char == '\\':
+            previous_char = char
+        else:
+            decoded_string += char
+            previous_char = char
 
+    return decoded_string
 
 def encode_file(src_file, targ_file):
     for line in src_file:
@@ -50,7 +67,7 @@ def encode_file(src_file, targ_file):
 
 def decode_file(src_file, targ_file):
     for line in src_file:
-        targ_file.write(encode_string(line))
+        targ_file.write(decode_string(line))
 
 
 def main(args):
