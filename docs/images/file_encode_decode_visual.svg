@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98761746"
-     inkscape:cx="383.62612"
-     inkscape:cy="323.7823"
+     inkscape:zoom="0.69670589"
+     inkscape:cx="815.71466"
+     inkscape:cy="494.85502"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -39,7 +39,9 @@
      inkscape:snap-object-midpoints="true"
      inkscape:snap-page="true"
      inkscape:snap-intersection-paths="true"
-     inkscape:object-paths="true" />
+     inkscape:object-paths="false"
+     inkscape:object-nodes="false"
+     inkscape:snap-nodes="false" />
   <metadata
      id="metadata1405">
     <rdf:RDF>
@@ -48,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -146,11 +148,128 @@
          y="372.99956"><tspan>on Modular OS </tspan></tspan><tspan
          x="1451.9792"
          y="422.99956"><tspan>Filesystem</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:350.048;fill:#000000;fill-opacity:1;stroke:none"
+       x="167.93312"
+       y="175.10976"
+       id="text904"
+       transform="translate(110.52009,15.788585)"><tspan
+         x="167.93312"
+         y="175.10976"><tspan
+           style="font-size:26.6667px">python.exe mos-main.py </tspan></tspan><tspan
+         x="167.93312"
+         y="208.44313"><tspan
+           style="font-size:26.6667px">encode ... -e</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="432.03308"
+       y="213.86356"
+       id="text908"><tspan
+         sodipodi:role="line"
+         id="tspan906"
+         x="432.03308"
+         y="213.86356" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="719.09827"
+       y="190.89835"
+       id="text912"><tspan
+         sodipodi:role="line"
+         x="719.09827"
+         y="190.89835"
+         id="tspan914"
+         style="font-size:26.6667px">Upload via Scratch list import</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="861.19556"
+       y="140.66194"
+       id="text920"><tspan
+         sodipodi:role="line"
+         id="tspan918"
+         x="861.19556"
+         y="140.66194" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="1212.8503"
+       y="192.33366"
+       id="text924"><tspan
+         sodipodi:role="line"
+         id="tspan922"
+         x="1212.8503"
+         y="192.33366"
+         style="font-size:26.6667px">Modular OS: stageToFile</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="1198.4971"
+       y="915.23236"
+       id="text928"><tspan
+         sodipodi:role="line"
+         id="tspan926"
+         x="1198.4971"
+         y="915.23236"
+         style="font-size:26.6667px">Modular OS: fileToStage</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="691.82709"
+       y="917.17328"
+       id="text932"><tspan
+         sodipodi:role="line"
+         id="tspan930"
+         x="691.82709"
+         y="917.17328"
+         style="font-size:26.6667px">Download via Scratch list export</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:382.683;fill:#000000;fill-opacity:1;stroke:none"
+       x="330.12494"
+       y="937.26782"
+       id="text936"
+       transform="translate(-30.141844,-18.659237)"><tspan
+         x="330.12494"
+         y="937.26782"><tspan
+           style="font-size:26.6667px">python.exe mos-main.py </tspan></tspan><tspan
+         x="330.12494"
+         y="970.60118"><tspan
+           style="font-size:26.6667px">encode ... -d</tspan></tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:3.64724409;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 163.62715,242.57008 c 1418.10195,0 1418.10195,0 1418.10195,0"
+       id="path938" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:3.64724409;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 1594.6471,855.45423 c -1428.1493,0 -1428.1493,0 -1428.1493,0"
+       id="path940" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:3.64724409;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 166.4978,855.45423 c 33.73016,33.73016 33.73016,33.73016 33.73016,33.73016"
+       id="path942" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:3.64724409;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 166.4978,855.45423 30.64741,-43.56534"
+       id="path952"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:3.64724409;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 1584.2132,241.9914 c -33.7301,-33.73016 -33.7301,-33.73016 -33.7301,-33.73016"
+       id="path942-3" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:3.64724409;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 1584.2132,241.9914 -30.6474,43.56534"
+       id="path952-5"
+       sodipodi:nodetypes="cc" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="guides">
+     inkscape:label="guides"
+     style="display:none">
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 0,552.84563 c 1920,0 1920,0 1920,0"
