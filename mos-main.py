@@ -118,14 +118,14 @@ def main(args):
     if command == "encode":
 
         # ensure that are a correct number of arguments
-        if len(args) != 4:
+        if len(args) != 5:
             print_usage_message("encode")
             sys.exit(0)
 
         # label the arguments
-        source_filename = args[1]
-        target_filename = args[2]
-        encode_option = args[3]
+        source_filename = args[2]
+        target_filename = args[3]
+        encode_option = args[4]
 
         # ensure the user provided a valid encode/decode option.
         if encode_option not in ["-e", "-d"]:
