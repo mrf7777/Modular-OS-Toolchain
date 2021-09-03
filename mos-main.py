@@ -129,6 +129,7 @@ def main(args):
 
         # ensure the user provided a valid encode/decode option.
         if encode_option not in ["-e", "-d"]:
+            print("Option \"" + encode_option + "\" is not supported.")
             print_usage_message("encode")
             sys.exit(0)
 
