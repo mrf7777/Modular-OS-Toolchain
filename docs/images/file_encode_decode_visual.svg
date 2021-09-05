@@ -23,8 +23,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.69670589"
-     inkscape:cx="815.71466"
+     inkscape:zoom="0.69506465"
+     inkscape:cx="995.14351"
      inkscape:cy="494.85502"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -157,10 +157,10 @@
        transform="translate(110.52009,15.788585)"><tspan
          x="167.93312"
          y="175.10976"><tspan
-           style="font-size:26.6667px">python.exe mos-main.py </tspan></tspan><tspan
+           style="font-size:26.6667px">&quot;python.exe mos-main.py </tspan></tspan><tspan
          x="167.93312"
          y="208.44313"><tspan
-           style="font-size:26.6667px">encode ... -e</tspan></tspan></text>
+           style="font-size:26.6667px">encode ... -e&quot;</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
@@ -234,10 +234,11 @@
        transform="translate(-30.141844,-18.659237)"><tspan
          x="330.12494"
          y="937.26782"><tspan
-           style="font-size:26.6667px">python.exe mos-main.py </tspan></tspan><tspan
+           style="font-size:26.6667px">&quot;python.exe mos-main.py </tspan></tspan><tspan
          x="330.12494"
          y="970.60118"><tspan
-           style="font-size:26.6667px">encode ... -d</tspan></tspan></text>
+           style="font-size:26.6667px">encode ... -d&quot;
+</tspan></tspan></text>
     <path
        style="fill:#000000;stroke:#000000;stroke-width:3.64724409;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 163.62715,242.57008 c 1418.10195,0 1418.10195,0 1418.10195,0"
@@ -264,6 +265,16 @@
        d="m 1584.2132,241.9914 -30.6474,43.56534"
        id="path952-5"
        sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="1536.5477"
+       y="607.13776"
+       id="text1049"><tspan
+         sodipodi:role="line"
+         id="tspan1047"
+         x="1536.5477"
+         y="607.13776" /></text>
   </g>
   <g
      inkscape:groupmode="layer"
