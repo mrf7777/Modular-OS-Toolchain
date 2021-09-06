@@ -1,0 +1,5 @@
+In Modular OS, the primary method of secondary storage is the file. Modular OS files have a filename and a size. 
+
+A Modular OS file has a different structure than regular computer file; in Modular OS, a file is a sequence of strings. When a file is uploaded from the computer to Modular OS, newlines in the file from the computer are used to split the lines of the file; each line of the file on the computer is a string in a Modular OS file. 
+
+Modular OS has no notion of a directory. Instead, Modular OS files are named with forward slashes (/) as if it is describing its full path. For example, let’s say someone wanted to make a directory called "help" with files "hello.txt" and "world.txt" inside of that directory; to do this in Modular OS, there would be files named "/help/hello.txt" and "/help/world.txt". Directories have no formal presence in Modular OS. In the example, we say that there is a "virtual directory" because the files imply its existence.

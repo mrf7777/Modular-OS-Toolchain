@@ -1,0 +1,11 @@
+"Modular OS Encoding" refers to a special file format that represents text in a way that makes it able to be uploaded to Scratch lists reliably.
+
+It is intended to work well with Unicode (UTF-8) as it only gives special treatment to specific characters: double quote (“), comma (,), and the backslash (\).
+
+To encode a text from UTF-8 to Modular OS Encoding, the text is scanned left to right and replaces certain individual characters with sequences of two characters. Here is the mapping:
+
+- , -> \c
+- " -> \q
+- \ -> \\
+
+To decode, the test is scanned from left to right and the substitutions are performed in the opposite direction.

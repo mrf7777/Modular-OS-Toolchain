@@ -1,0 +1,6 @@
+A Modular OS Module refer to a special virtual directory that meets special requirements.
+
+For a virtual directory named <dir-name>, the following conditions must be met for it to be considered a Module with name <dir-name>.
+
+- It must have a file named “/<dir-name>/.mod-version”. It must have only one line which holds a non-negative integer.
+- It must have a file named “/<dir-name>/.mod-dependencies”. It must have an even number of lines. For each pair of lines, the first line specifies a module name, the second line specifies the minimum version required for that module.
