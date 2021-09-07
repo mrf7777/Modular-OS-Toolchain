@@ -1,0 +1,3 @@
+The file "commands.csv" provides a table of commands, how they access and modify the stack and control flow.
+
+It also provides a column for documentation of the behavior of the commands.
