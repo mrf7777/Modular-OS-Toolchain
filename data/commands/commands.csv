@@ -40,30 +40,30 @@ equal,2,1,0,0,"Tests if 1-back and 2-back are equal. Pop twice and push 1 if the
 lessThan,2,1,0,0,"Tests if 2-back is less than 1-back. Pop twice and push 1 if tests passes, 0 otherwise."
 greaterThan,2,1,0,0,"Tests if 2-back is greater than 1-back. Pop twice and push 1 if test passes, 0 otherwise."
 run,1,1,NA,0,Executes the value of 1-back literaly. Pops stack before execution. This allows dynamic code execution. The value of 1-back may create side affects.
-username,0,1,0,0,
-daysSince2000,0,1,0,0,
-timer,0,1,0,0,
-resetTimer,0,0,0,0,
-mouseX,0,1,0,0,
-mouseY,0,1,0,0,
-keyPressed,1,1,0,0,
-ask,1,1,0,0,
-print,1,0,0,0,
-showConsole,0,0,0,0,
-hideConsole,0,0,0,0,
-clearConsole,0,0,0,0,
-appendFile,2,0,0,0,
-bumpFile,1,0,0,0,
-copyFile,2,0,0,0,
-createFile,2,0,0,0,
-deleteFile,1,0,0,0,
-fileExists,1,1,0,0,
-fileToStage,1,0,0,0,
-stageToFile,0,0,0,0,
-getLineFromFile,2,1,0,0,
-getFileSize,1,1,0,0,
-removeLineFromFile,2,0,0,0,
-replaceLineInFile,3,0,0,0,
+username,0,1,0,0,"Pushes the username of the current user of Modular OS. If the username is not avaliable, it pushes an empty string."
+daysSince2000,0,1,0,0,Pushes the days since the year 2000.
+timer,0,1,0,0,Pushes the current time given by the Scratch timer.
+resetTimer,0,0,0,0,Resets the timer
+mouseX,0,1,0,0,Pushes the x position of the mouse according to Scratch.
+mouseY,0,1,0,0,Pushes the y position of the mouse according to Scratch.
+keyPressed,1,1,0,0,Tests if the key named 1-back is pressed. Pops once and pushes the result.
+ask,1,1,0,0,"Asks the user with the message 1-back. Captures the input, pops once, and pushes the input string."
+print,1,0,0,0,"Prints the string 1-back to the console, then pops once."
+showConsole,0,0,0,0,Shows the console.
+hideConsole,0,0,0,0,Hides the console.
+clearConsole,0,0,0,0,Clears the console.
+appendFile,2,0,0,0,"Given filename 2-back, appends the string 1-back to the file. Pops twice."
+bumpFile,1,0,0,0,"Given filename 1-back, bumps the file to optimize it for access and modification. Pops once."
+copyFile,2,0,0,0,"Given filenames 2-back and 1-back, deletes file 1-back, creates file 1-back, copies contents of file 2-back into file 1-back. Pops twice."
+createFile,2,0,0,0,Creates a file named 2-back and gives it an initial empty size of 1-back. Initial lines are empty. Pops twice.
+deleteFile,1,0,0,0,Deletes filename 1-back if it exists. Pops once.
+fileExists,1,1,0,0,"Tests if file 1-back exists. Pop once. If tests passes, push 1, 0 otherwise."
+fileToStage,1,0,0,0,Copies file 1-back to the file stage and sets the file stage name. Pops once.
+stageToFile,0,0,0,0,Creates a file named after the file stage name and copies the contents from the file stage to the newly created file.
+getLineFromFile,2,1,0,0,Gets line number 1-back from file 2-back. Pops twice then pushes the read line.
+getFileSize,1,1,0,0,Gets the size of the file 1-back. Pops once then pushes the size of the file.
+removeLineFromFile,2,0,0,0,Removes line 1-back from file 2-back. Pops twice.
+replaceLineInFile,3,0,0,0,Replaces line 2-back in file 3-back and replaces it with the string 1-back. Pops thrice.
 getCommandType,1,1,0,0,
 setMemory,2,0,0,0,
 getMemory,1,1,0,0,
