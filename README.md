@@ -1,4 +1,4 @@
-# Modular-OS-Toolchain
+# Modular OS Toolchain
 
  This toolchain makes development for Modular OS easy by providing platform-independent Python tools. The toolchain also includes other resources that aid in development.
 
