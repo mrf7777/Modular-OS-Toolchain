@@ -1,4 +1,4 @@
-﻿Command Name,Stack Popped,Stack Pushed ,Alters Control Flow,Alters Call Stack,Behavior
+Command Name,Stack Popped,Stack Pushed ,Alters Control Flow,Alters Call Stack,Behavior
 goto,1,0,1,0,Jumps to label 1-back in current file if it exists.
 gotoIf,2,0,NA,0,"Jumps to label 2-back in stack if it exists and the value 1-back in stack is non-zero,"
 call,1,0,1,1,Adds current execution location to call stack and goes to label 1-back if it exists.
@@ -33,13 +33,13 @@ ln,1,1,0,0,"Calculates the natural logarithm of 1-back, pops once, and pushes re
 log,1,1,0,0,"Calculates the base 10 logarithm of 1-back, pops once, and pushes result."
 ePow,1,1,0,0,"Calculates the power with base e of 1-back, pops once, and pushes result."
 10Pow,1,1,0,0,"Calculates the power with base 10 of 1-back, pops once, and pushes result."
-and,2,1,0,0,
-or,2,1,0,0,
-not,1,1,0,0,
-equal,2,1,0,0,
-lessThan,2,1,0,0,
-greaterThan,2,1,0,0,
-run,1,NA,0,0,
+and,2,1,0,0,"Remember 1-back and 2-back. Pop twice. If the remembered 1-back and 2-back are non-zero, push 1, 0 otherwise."
+or,2,1,0,0,"Remember 1-back and 2-back. Pop twice. If the remembered 1-back or 2-back are non-zero, push 1, 0 otherwise."
+not,1,1,0,0,"Remember 1-back. Pop once. If the remembered 1-back is non-zero, push 0, 1 otherwise."
+equal,2,1,0,0,"Tests if 1-back and 2-back are equal. Pop twice and push 1 if they are equal, 0 otherwise."
+lessThan,2,1,0,0,"Tests if 2-back is less than 1-back. Pop twice and push 1 if tests passes, 0 otherwise."
+greaterThan,2,1,0,0,"Tests if 2-back is greater than 1-back. Pop twice and push 1 if test passes, 0 otherwise."
+run,1,1,NA,0,Executes the value of 1-back literaly. Pops stack before execution. This allows dynamic code execution. The value of 1-back may create side affects.
 username,0,1,0,0,
 daysSince2000,0,1,0,0,
 timer,0,1,0,0,
