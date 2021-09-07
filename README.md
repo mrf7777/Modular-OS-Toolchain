@@ -1,6 +1,6 @@
-# Modular-OS-Toolchain
+# Modular OS Toolchain
 
- This toolchain makes development for Modular OS easy by providing platform-independent Python tools. The toolchain also includes other resources that aid in development.
+This toolchain makes development for Modular OS easy by providing platform-independent Python tools. The toolchain also includes other resources that aid in development.
 
 Modular OS is a Scratch project that can be found here: https://scratch.mit.edu/projects/561915473/
 
@@ -19,3 +19,5 @@ Or, you can download the files directly from github. From the master branch, go 
 It is assumed that you have python 3.x installed on your system.
 
 Type ``` python.exe mos-main.py ``` to see the usage message.
+
+You do not have to install any other modules or packages to use the toolchain.
