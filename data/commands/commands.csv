@@ -64,34 +64,34 @@ getLineFromFile,2,1,0,0,Gets line number 1-back from file 2-back. Pops twice the
 getFileSize,1,1,0,0,Gets the size of the file 1-back. Pops once then pushes the size of the file.
 removeLineFromFile,2,0,0,0,Removes line 1-back from file 2-back. Pops twice.
 replaceLineInFile,3,0,0,0,Replaces line 2-back in file 3-back and replaces it with the string 1-back. Pops thrice.
-getCommandType,1,1,0,0,
-setMemory,2,0,0,0,
-getMemory,1,1,0,0,
-getMemorySize,0,1,0,0,
-switchCostumeTo,1,0,0,0,
-switchBackdropTo,1,0,0,0,
-setSizeTo,1,0,0,0,
-show,0,0,0,0,
-hide,0,0,0,0,
-moveSteps,1,0,0,0,
-turnCWDegrees,1,0,0,0,
-turnCCWDegrees,1,0,0,0,
-gotoMousePointer,0,0,0,0,
-pointTowardsMousePointer,0,0,0,0,
-gotoXY,2,0,0,0,
-glideSecsToXY,3,0,0,0,
-pointInDirection,1,0,0,0,
-setXTo,1,0,0,0,
-setYTo,1,0,0,0,
-eraseAll,0,0,0,0,
-stamp,0,0,0,0,
-penDown,0,0,0,0,
-penUp,0,0,0,0,
-setPenColorTo,1,0,0,0,
-setPenSaturationTo,1,0,0,0,
-setPenBrightnessTo,1,0,0,0,
-setPenTransparencyTo,1,0,0,0,
-setPenSizeTo,1,0,0,0,
-speak,1,0,0,0,
-setVoiceTo,1,0,0,0,
-setLanguageTo,1,0,0,0,
+getCommandType,1,1,0,0,"Gets command type of 1-back: if 1-back is command, type is 'cmd', if it is literal expression (in double quotes), type is 'lit', otherwise type is 'invalid'. Pops once. Pushes command type."
+setMemory,2,0,0,0,Sets memory location 2-back to the value 1-back. Pops twice.
+getMemory,1,1,0,0,Gets memory value in location 1-back. Pops once. Pushes retrieved value.
+getMemorySize,0,1,0,0,"Pushes the size of the memory. In Scratch 3.0, as of 2021-September-8, this should return 200,000 which is the max number of items in a Scratch 3.0 list."
+switchCostumeTo,1,0,0,0,"Switches the costume of the sprite to 1-back, the costume name. Pops once."
+switchBackdropTo,1,0,0,0,"Switches the stage backdrop to 1-back, the backdrop name. Pops once."
+setSizeTo,1,0,0,0,Sets the size of the sprite to 1-back. Pops once.
+show,0,0,0,0,Shows the sprite.
+hide,0,0,0,0,Hides the sprite.
+moveSteps,1,0,0,0,Makes the sprite move 1-back steps forward with respect to its current orientation. Pops once.
+turnCWDegrees,1,0,0,0,Makes the sprite rotate 1-back degrees clock-wise. Pops once.
+turnCCWDegrees,1,0,0,0,Makes the sprite rotate 1-back degrees counter/anti-clock-wise. Pops once.
+gotoMousePointer,0,0,0,0,Makes the sprite go to the position of the mouse pointer on the screen.
+pointTowardsMousePointer,0,0,0,0,Makes the sprite point towards the mouse pointer on the screen.
+gotoXY,2,0,0,0,Sets the sprite's x position to 2-back and y position to 1-back. Pops twice.
+glideSecsToXY,3,0,0,0,"Makes the sprite move from its current location to location (2-back, 1-back) over 3-back seconds. Pops thrice."
+pointInDirection,1,0,0,0,Makes the sprite point in direction 1-back in degrees. Starts from the 12-o-clock position and increments clock-wise. Pops once.
+setXTo,1,0,0,0,Sets the sprite's x position to 1-back. Pops once.
+setYTo,1,0,0,0,Sets the sprite's y position to 1-back. Pops once.
+eraseAll,0,0,0,0,Clears the screen from all pen effects.
+stamp,0,0,0,0,Creates a graphical copy of the sprite onto the backdrop as if it was stamped on there.
+penDown,0,0,0,0,Makes the pen go down.
+penUp,0,0,0,0,Makes the pen go up.
+setPenColorTo,1,0,0,0,Sets the pen color to 1-back. Pops once.
+setPenSaturationTo,1,0,0,0,Sets the pen saturation to 1-back. Pops once.
+setPenBrightnessTo,1,0,0,0,Sets the pen brightness to 1-back. Pops once.
+setPenTransparencyTo,1,0,0,0,Sets the pen transparency to 1-back. Pops once.
+setPenSizeTo,1,0,0,0,Sets the pen size to 1-back. Pops once.
+speak,1,0,0,0,Attempts to speak the content of 1-back. Pops once.
+setVoiceTo,1,0,0,0,Sets the voice type to 1-back. Pops once.
+setLanguageTo,1,0,0,0,Sets the language for the speech engine to 1-back. Pops once.
