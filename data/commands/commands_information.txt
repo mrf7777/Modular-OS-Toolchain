@@ -1,0 +1,5 @@
+The file "commands.csv" provides a table of commands, how they access and modify the stack and control flow.
+
+It also provides a column for documentation of the behavior of the commands.
+
+n-back refers to the value n places back in the stack. For example, 1-back refers to the top of the stack and 2-back refers to the next-to-top item in the stack, etc.
