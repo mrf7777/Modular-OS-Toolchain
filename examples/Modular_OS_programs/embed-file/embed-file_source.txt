@@ -1,0 +1,41 @@
+# given a filename, create a new file that is sufficient to reconstruct
+#     the original file.
+
+# expected inputs: in_fn out_fn
+main:
+
+	# in_fn out_fn
+	
+	peek
+	
+	# in_fn out_fn out_fn
+	
+	"3"
+	peekBack
+	
+	# in_fn out_fn out_fn in_fn
+	
+	"2"
+	peek
+	"2"
+	peek
+	
+	# in_fn out_fn out_fn in_fn out_fn in_fn
+	
+	appendFile	# add the filename in_fn at top of file out_fn
+	
+	# in_fn out_fn out_fn in_fn
+	
+	getFileSize
+	
+	# in_fn out_fn out_fn size(in_fn)
+	
+	appendFile	# add the size of file in_fn to file out_fn
+	
+	# in_fn out_fn
+	
+	# now that the filename and size of file in_fn are embeded in file
+	#     out_fn, it is time to embed the contents of file in_fn to file
+	#     out_fn.
+	
+	

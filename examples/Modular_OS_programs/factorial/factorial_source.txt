@@ -1,0 +1,77 @@
+# computes the factorial of an integer num.
+
+"main"
+goto
+
+# expected input: num
+main:
+	
+	# num
+	
+	peek
+	
+	# num num
+	
+	"0"
+	
+	# num num 0
+	
+	equal
+	
+	# num (num==0)
+	
+	"case-0"
+	
+	# num (num==0) case-0
+	
+	"2"
+	peekBack
+	
+	# num (num==0) case-0 (num==0)
+	
+	gotoIf	# attempt to return a 1 if a 0 is passed into the function
+	
+	# if here, the input was not zero.
+	
+	# num (num==0)
+	
+	pop
+	
+	# num
+	
+	peek
+	
+	# num num
+	
+	"1"
+	sub
+	
+	# num (num-1)
+	
+	"main"
+	call	# this is a recursive call
+	
+	# num fact(num-1)
+	
+	mult
+	
+	# (num*fact(num-1))  //we have finally reached the recursive form of the factorial.
+	
+	return
+	
+
+# go here to clear input part of the stack and return a 1
+case-0:
+
+	# num (num==0)
+	
+	pop
+	pop
+	
+	# <empty stack>
+	
+	"1"
+	
+	# 1
+	
+	return
