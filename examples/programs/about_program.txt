@@ -1,0 +1,11 @@
+Each subdirectory here has two text files: a source code file and its compiled then encoded version.
+
+How to Load a Program into Modular OS as a File:
+
+-import the compiled, encoded version into the file stage.
+-rename the variable "file stage name" to the desired filename.
+-execute the block filesystem.stage_to_filesystem
+	-this will create, or clear, a file with the name set in the variable "file stage name" and fill
+	   it with the decoded contents.
+
+..and you are done.
