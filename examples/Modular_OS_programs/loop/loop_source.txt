@@ -1,0 +1,66 @@
+# prints something a specified number of times
+
+
+# expected input: times
+main:
+	
+	# times
+	
+	"case-1"
+	
+	# times case-1
+	
+	"2"
+	peekBack
+	
+	# times case-1 times
+	
+	"1"
+	
+	# times case-1 times 1
+	
+	equal
+	
+	# times case-1 (times==1)
+	
+	gotoIf	#goes to case-1 if times is 1
+	
+	# if here, times is non-zero
+	
+	# times
+	
+	"1"
+	
+	# times 1
+	
+	sub
+	
+	# (times-1)
+	
+	
+	"loop"
+	print	#print the loop
+	
+	# (times-1)
+	
+	"main"	
+	
+	# (times-1) main
+	
+	call	# calls main with times-1
+	
+	# this is a guard. This should never be reached.
+	return
+	
+case-1:
+
+	# times
+	
+	pop
+	
+	# <empty stack>
+	
+	"loop"
+	print	# prints item to screen
+
+	return

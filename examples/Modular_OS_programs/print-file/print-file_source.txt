@@ -1,0 +1,106 @@
+# this code prints the contents of a file to the console.
+
+# expected input: filename
+main:
+
+	# filename
+	
+	"1"
+	
+	# filename 1
+
+	"print-file-from"
+	call
+
+	return
+
+# input: filename start
+#
+# filename specifies the file
+# start specifies where to start printing the file
+print-file-from:
+	
+	# filename start
+	
+	"2"
+	peekBack
+	
+	# filename start filename
+	
+	getFileSize
+	
+	# filename start fileSize(filename)
+	
+	"2"
+	peekBack
+	
+	# filename start fileSize(filename) start
+	
+	"1"
+	sub
+	
+	# filename start fileSize(filename) start-1
+	
+	equal
+	
+	# filename start (fileSize(filename)==start-1)
+	
+	"print-file-from-end-case"
+	
+	# filename start (fileSize(filename)==start-1) print-file-from-end-case
+	
+	"2"
+	peekBack
+	
+	# filename start (fileSize(filename)==start-1) print-file-from-end-case (fileSize(filename)==start-1)
+	
+	gotoIf
+	
+	# filename start (fileSize(filename)==start-1)
+	
+	pop
+	
+	# filename start
+	
+	"2"
+	peekBack
+	"2"
+	peekBack
+	
+	# filename start filename start
+	
+	getLineFromFile
+	
+	# filename start file(filename)[start]
+	
+	print
+	
+	# filename start
+	
+	"1"
+	add
+	
+	# filename start+1
+	
+	"print-file-from"
+	call
+	
+	# filename start+*
+	
+	"2"
+	popTimes
+	
+	# <empty stack>
+	
+	return
+	
+	print-file-from-end-case:
+		
+		# filename start (fileSize(filename)==start-1)
+		
+		"3"
+		popTimes
+		
+		# <empty stack>
+		
+		return

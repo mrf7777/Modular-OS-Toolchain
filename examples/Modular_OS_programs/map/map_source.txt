@@ -1,0 +1,157 @@
+# applies a special type of program to a list of elements found in a file.
+
+# expected input: in_fn out_fn program
+#
+# in_fn: the filename of the input file
+# out_fn: the filename of the output file
+# program: the filename of a code file
+#
+# program must refer to a code file with special properties for map to behave correctly:
+#     - If called by callFile, it must consume a single item on the stack and push the result to the stack.
+#         - This ensures that the program passed in behaves like a mathematical funciton.
+
+# input: in_fn out_fn program
+map:
+
+	# in_fn out_fn program
+	
+	"1"
+	
+	# in_fn out_fn program 1
+	
+	"map-range"
+	call
+	
+	# <empty stack>
+
+	return
+	
+	
+# exected input: in_fn out_fn program start
+# applies program, a code file, to each line of file in_fn, writes it to out_fn, starting at start until the end of the file in_fn.
+# file out_fn is expected to exist and have the same size as file in_fn
+map-range:
+
+	# in_fn out_fn program start
+	
+	"4"
+	peekBack
+
+	# in_fn out_fn program start in_fn
+	
+	getFileSize
+	
+	# in_fn out_fn program start fileSize(in_fn)
+	
+	"2"
+	peekBack
+	
+	"1"
+	sub
+	
+	# in_fn out_fn program start fileSize(in_fn) start-1
+	
+	equal
+	
+	# in_fn out_fn program start (fileSize(in_fn)==start-1)
+	
+	"map-range-end-case"
+	
+	# in_fn out_fn program start (fileSize(in_fn)==start-1) map-range-end-case
+	
+	"2"
+	peekBack
+	
+	# in_fn out_fn program start (fileSize(in_fn)==start-1) map-range-end-case (fileSize(in_fn)==start+1)
+	
+	gotoIf	# jump only if start has reached outside of the file
+	
+	# if here, start references some line in the file in_fn.
+	# this means we must apply the program to the line referneced by start and call map-range(in_fn, out_fn, start+1) for recursion.
+	
+	# in_fn out_fn program start (fileSize(in_fn)==start-1)
+	
+	pop
+	
+	# in_fn out_fn program start
+	
+	# first, apply program to the correct line in file in_fn.
+	# then, with the result, put it in filie out_fn at the same line number.
+	
+	"4"
+	peekBack
+	
+	# in_fn out_fn program start in_fn
+	
+	"2"
+	peekBack
+	
+	# in_fn out_fn program start in_fn start
+	
+	getLineFromFile
+	
+	# in_fn out_fn program start file(in_fn)[start]
+	
+	"3"
+	peekBack
+	
+	# in_fn out_fn program start file(in_fn)[start] program
+	
+	callFile
+	
+	# in_fn out_fn program start program(file(in_fn)[start])
+	
+	"4"
+	peekBack
+	
+	# in_fn out_fn program start program(file(in_fn)[start]) out_fn
+	
+	"3"
+	peekBack
+	
+	# in_fn out_fn program start program(file(in_fn)[start]) out_fn start
+	
+	"3"
+	peekBack
+	
+	# in_fn out_fn program start program(file(in_fn)[start]) out_fn start program(file(in_fn)[start])
+	
+	replaceLineInFile
+	
+	# in_fn out_fn program start program(file(in_fn)[start])
+	
+	pop
+	
+	# in_fn out_fn program start
+	
+	"1"
+	add
+	
+	# in_fn out_fn program start+1
+	
+	# time to make the recursive call
+	
+	"map-range"
+	call
+	
+	##### should i empty stack here?
+	# yes
+	
+	"4"
+	popTimes
+	
+	# <empty stack>
+
+	return
+	
+	map-range-end-case:
+	
+		# in_fn out_fn program start (fileSize(in_fn)==start-1)
+	
+		# clear the arguments and extra calculations
+		"5"
+		popTimes
+		
+		# <empty stack>
+		
+		return

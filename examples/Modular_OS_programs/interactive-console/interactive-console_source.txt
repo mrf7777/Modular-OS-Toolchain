@@ -1,0 +1,13 @@
+# this code, when run, creates a loop that accepts user input.
+# if this file is uploaded with the name "/sys/boot", then this will
+#     be the default behavior of the operating system.
+
+showConsole
+
+main:
+
+	"Enter in Command or Literal."
+	ask
+	run
+	"main"
+	goto
