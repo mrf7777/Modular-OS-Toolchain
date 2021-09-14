@@ -1,0 +1,4 @@
+main:
+\q1\q
+add
+return

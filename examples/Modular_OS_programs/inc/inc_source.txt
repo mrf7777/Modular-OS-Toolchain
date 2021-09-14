@@ -1,0 +1,14 @@
+# this code increments the number provided by 1
+
+# expected input: num
+# output: num+1
+main:
+	
+	# num
+	
+	"1"
+	add
+	
+	# num+1
+	
+	return

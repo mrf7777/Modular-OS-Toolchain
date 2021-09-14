@@ -1,0 +1,9 @@
+/sys/boot
+7
+showConsole
+main:
+\qEnter in Command or Literal.\q
+ask
+run
+\qmain\q
+goto

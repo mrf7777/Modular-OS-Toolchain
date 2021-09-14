@@ -1,0 +1,8 @@
+Each subdirectory here has two text files: an encoded and decoded version.
+
+How to Load Filesystem Image into Modular OS:
+
+-import the encoded version into the file stage.
+-execute the block Modular.load_filesystem
+
+...and you are done.

@@ -1,0 +1,9 @@
+/sys/boot
+7
+showConsole
+main:
+"Enter in Command or Literal."
+ask
+run
+"main"
+goto
