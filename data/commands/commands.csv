@@ -62,6 +62,7 @@ fileToStage,1,0,0,0,Copies file 1-back to the file stage and sets the file stage
 stageToFile,0,0,0,0,Creates a file named after the file stage name and copies the contents from the file stage to the newly created file.
 getLineFromFile,2,1,0,0,Gets line number 1-back from file 2-back. Pops twice then pushes the read line.
 getFileSize,1,1,0,0,Gets the size of the file 1-back. Pops once then pushes the size of the file.
+getListOfFiles,1,0,0,0,"Creates file 1-back and fills it with a list of all filenames on the filesystem. If the file 1-back did not exist, it is not included in the list; otherwise, it is. Pops once."
 removeLineFromFile,2,0,0,0,Removes line 1-back from file 2-back. Pops twice.
 replaceLineInFile,3,0,0,0,Replaces line 2-back in file 3-back and replaces it with the string 1-back. Pops thrice.
 getCommandType,1,1,0,0,"Gets command type of 1-back: if 1-back is command, type is 'cmd', if it is literal expression (in double quotes), type is 'lit', otherwise type is 'invalid'. Pops once. Pushes command type."
